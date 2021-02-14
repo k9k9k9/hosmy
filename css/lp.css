@@ -1,0 +1,305 @@
+@charset "utf-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+font-family: "san-serif", "游ゴシック" , sans-serif;
+margin: 0;
+padding: 0;
+background: #000;
+}
+img {
+max-width: 640px;
+display: block;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 70px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+header img {
+  width: 100px;
+  margin: 8px 0 0 20px;
+}
+
+.header_nav ul {
+  display: flex;
+  margin: 25px 30px 0 0;
+}
+.header_nav ul li {
+  margin-right: 24px;
+}
+.header_nav ul li a {
+  text-decoration: none;
+  font-family: "游明朝体", serif;
+  color: #444;
+  font-size: 16px;
+  letter-spacing: .1em;
+	display: inline-block;
+	position: relative;
+}
+.header_nav ul li a:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	width: 100%;
+	height: 2px;
+	background: #555;
+	transform: scale(0, 1);
+	transition: 0.4s;
+}
+.header_nav ul li a:hover:before {
+	transform: scale(1);
+}
+
+#b_nav ul {
+  text-align: center;
+  margin: 32px 0;
+}
+#b_nav ul li {
+  width: 100%;
+}
+#b_nav ul li a {
+  display: block;
+  color: rgba(255,255,255,.8);
+  text-decoration: none;
+  padding: 10px 0;
+  font-family: "serif","游明朝体", serif;
+  font-size: 18px;
+}
+#b_nav ul li a:hover {
+  color: rgba(255,255,255,1);
+}
+#b_nav {
+  background: rgba(0,0,0,.7);
+  position: absolute;
+  left: 0;
+/* ナビメニューを上に隠す*/
+  top: -360px;
+  width: 100%;
+  height: 360px;
+  transition: .5s;
+}
+#hamburger {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+.inner_line {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 5px;
+  background-color: #555;
+  transition: .3s;
+  border-radius: 4px;
+}
+#line1 {
+  top: 0;
+  transform-origin: top right;
+}
+#line2 {
+  top: 10px;
+}
+#line3 {
+  bottom: 0px;
+  transform-origin: bottom right;
+}
+.in{
+  transform: translateY(100%);
+}
+  .line_1,.line_2,.line_3{
+  background: #fff;
+}
+.line_1 {
+/*-45度回転させる*/
+  transform: rotate(-45deg);
+}
+.line_2 {
+  opacity: 0;
+}
+.line_3 {
+  /*45度回転させる*/
+  transform: rotate(45deg);
+}
+
+.line_fix a {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  background: #00B900;
+  height: 72px;
+  max-width: 420px;
+  width: 100%;
+  color: #FFF;
+  justify-content: center;
+}
+.fa-arrow-circle-right {
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  right: 1rem;
+}
+.fix_line {
+  font-size: 42px;
+  position: absolute;
+  top: 16px;
+  left: 1rem;
+}
+.text_flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.large_text {
+  font-size: 22px;
+  font-weight: bold;
+}
+.large_text span {
+  display: inline-block;
+  margin: 0 16px;
+  position: relative;
+}
+.large_text span::before{
+  content: "";
+  background: #FAF123;
+  height: 20px;
+  width: 3px;
+  position: absolute;
+  top: 6px;
+  left: -16px;
+  transform: rotate(-32deg);
+}
+.large_text span::after{
+  content: "";
+  background: #FAF123;
+  height: 20px;
+  width: 3px;
+  position: absolute;
+  top: 6px;
+  right: -16px;
+  transform: rotate(32deg);
+}
+.little_text {
+  font-size: 14px;
+}
+
+.lp_wrap {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+footer {
+  height: 100px;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.sns_wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+  margin: 13px auto;
+}
+.btn {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.btn i {
+  font-size: 25px;
+  color: #fff;
+  line-height: 50px;
+}
+.btn:hover {
+  opacity: .7;
+}
+.twitter {
+  background: #1DA1F2;
+}
+.line {
+  background-color: #00B900;
+}
+
+footer span {
+  font-size: 13px;
+  color: #999;
+}
+
+.fa-chevron-up{
+  font-size: 20px;
+}
+.scroll-top {
+  position: fixed;
+  right: 25px;
+  bottom: 80px;
+  z-index: 100;
+  background-color: #666;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+}
+.scroll-top:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+
+@media(max-width: 640px) {
+  img {
+    width:100%;
+  }
+  header img {
+      width: 70px;
+      margin: 14px 0 0 16px;
+  }
+  .header_nav {
+    display: none;
+  }
+  header #hamburger {
+    display: block;
+  }
+  .line_fix a {
+    width: 100%;
+  }
+
+
+  .fa-chevron-up{
+    font-size: 16px;
+  }
+
+  .scroll-top {
+    right: 16px;
+}
+  footer {
+    height: 180px;
+  }
+  footer span {
+    margin-bottom: 80px;
+  }
+}
